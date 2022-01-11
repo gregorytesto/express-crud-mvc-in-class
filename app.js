@@ -1,8 +1,9 @@
 const express = require("express");
 const app = express();
 
-const bookmarksController = require("./controllers/bookmarksController.js");
+app.use(express.json());
 
+const bookmarksController = require("./controllers/bookmarksController.js");
 
 app.get("/", (req, res)=>{
     res.send("Welcome to our bookmarks app");
