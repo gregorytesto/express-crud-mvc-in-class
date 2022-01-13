@@ -23,6 +23,7 @@ bookmarkRoutes.post("/", (req, res)=>{
     res.json(bookmarksArr[bookmarksArr.length-1]);
 })
 
+// /bookmarks/1
 bookmarkRoutes.delete("/:index", (req, res)=>{
     const { index } = req.params;
     if(bookmarksArr[index]){
@@ -33,6 +34,7 @@ bookmarkRoutes.delete("/:index", (req, res)=>{
     }
 })
 
+// /bookmarks/1
 bookmarkRoutes.put("/:index", (req, res)=>{
     let { index } = req.params;
 
