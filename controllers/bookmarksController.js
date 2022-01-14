@@ -45,10 +45,10 @@ bookmarkRoutes.put("/:index", (req, res)=>{
         return;
     }
 
-    let { name, url, isFavorite, category } = req.body;
+    let { name, url, isFavorite, category, description } = req.body;
     if(name && url && isFavorite !== undefined && category){
         bookmarksArr[index] = {
-            name, url, isFavorite, category
+            name, url, isFavorite, category, description
         };
         res.json(bookmarksArr[index]);
     } else {
